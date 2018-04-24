@@ -25,7 +25,6 @@ var svgArr = [svg01d, svg01n, svg02d, svg02n, svg03d, svg03n, svg04d, svg04n, sv
 class DayContainer extends React.Component {
   constructor (props) {
     super(props);
-
     this.state = {
       img: null,
       subheader: ''

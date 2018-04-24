@@ -1,4 +1,5 @@
 var React = require('react');
+var Link = require('react-router-dom').Link;
 var DayContainer = require('./DayContainer');
 var queryString = require('query-string');
 var api = require('../utils/api');
@@ -44,25 +45,25 @@ class Forecast extends React.Component {
     this.updateWeather();
   }
 
-  // componentDidUpdate () {
-  //   this.updateWeather();
-  // }
-
   render () {
+    var location = this.state.location;
     var data = this.state.weatherData;
-
     return (
       <div>
-        <h1 className='forecast-header'>{this.state.location}</h1>
+        <h1 className='forecast-header'>{!this.state.weatherData ? 'Loading' : this.state.location}</h1>
         <div className='forecast-container'>
           {!data ? '' : data.map(function(day, index) {
-            console.log(day);
             return (
-              <DayContainer
+              <Link
                 key={index}
-                icon={day.weather[0].icon}
-                alt={day.weather[0].main}
-                unixTime={day.dt} />
+                to={{
+                  pathname: '/details/',
+                  search: location}}>
+                <DayContainer
+                  icon={day.weather[0].icon}
+                  alt={day.weather[0].main}
+                  unixTime={day.dt} />
+              </Link>
             )
           })}
         </div>
@@ -70,5 +71,6 @@ class Forecast extends React.Component {
     )
   }
 }
+
 
 module.exports = Forecast;

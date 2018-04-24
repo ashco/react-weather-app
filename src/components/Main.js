@@ -6,7 +6,7 @@ class Main extends React.Component {
     return (
       <div className="home-container">
         <h1 className="header">Enter a City and State</h1>
-        <ZipcodeContainer onSearch={this.props.onSearch} flexDirection='column'/>
+        <ZipcodeContainer flexDirection='column'/>
       </div>
     )
   }

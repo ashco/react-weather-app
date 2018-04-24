@@ -12,27 +12,13 @@ var Details = require('./Details');
 
 
 class App extends Component {
-  // constructor (props) {
-  //   super(props);
-
-  //   this.state = {
-  //     location: '',
-  //     weatherData: null
-  //   }
-
-  //   this.searchWeather = this.searchWeather.bind(this);
-  // }
-
-
 
   render() {
-
-
 
     return (
       <Router>
         <div className="App">
-          <Header onSearch={this.searchWeather}/>
+          <Header />
 
           <Switch>
             <Route exact path='/' component={Main} />
@@ -42,9 +28,6 @@ class App extends Component {
               return <p>Not Found</p>
             }} />
           </Switch>
-          {/* {!this.state.location
-            ? <Main onSearch={this.searchWeather} backgroundImg={backgroundImg} />
-            : <Forecast location={!this.state.weatherData ? 'Loading' : this.state.location} data={this.state.weatherData}/>} */}
         </div>
       </Router>
     );
