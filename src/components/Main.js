@@ -6,7 +6,7 @@ class Main extends React.Component {
     return (
       <div className="home-container" style={{backgroundImage: `url(${this.props.backgroundImg})`}}>
         <h1 className="header">Enter a City and State</h1>
-        <ZipcodeContainer flexDirection='column'/>
+        <ZipcodeContainer onSearch={this.props.onSearch} flexDirection='column'/>
       </div>
     )
   }

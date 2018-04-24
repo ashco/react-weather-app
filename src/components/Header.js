@@ -6,7 +6,7 @@ class Header extends React.Component {
     return (
       <div className='navbar'>
         <h1>Clever Title</h1>
-        <ZipcodeContainer flexDirection='row'/>
+        <ZipcodeContainer onSearch={this.props.onSearch} flexDirection='row'/>
       </div>
     )
   }
