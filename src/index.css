@@ -61,7 +61,7 @@ body {
   align-items: center;
 }
 
-.zipcode-container button {
+.zipcode-container .btn {
   margin: 10px;
   background: #72B566;
 }
@@ -74,6 +74,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-image: url(./images/pattern.svg);
 }
 
 .header {
@@ -82,11 +83,31 @@ body {
   font-weight: 100;
 }
 
+.forecast-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 50px auto;
+}
+
 .forecast-header {
   font-size: 65px;
   color: #333;
   font-weight: 100;
   text-align: center;
+}
+
+.day-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 35px;
+}
+
+.weather {
+  height: 130px;
 }
 
 .subheader {

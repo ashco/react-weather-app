@@ -4,7 +4,7 @@ var ZipcodeContainer = require('./ZipcodeContainer');
 class Main extends React.Component {
   render () {
     return (
-      <div className="home-container" style={{backgroundImage: `url(${this.props.backgroundImg})`}}>
+      <div className="home-container">
         <h1 className="header">Enter a City and State</h1>
         <ZipcodeContainer onSearch={this.props.onSearch} flexDirection='column'/>
       </div>
